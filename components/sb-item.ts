@@ -18,7 +18,7 @@ export class SBItem {
     @Input() public collapsed: boolean = true;
     @Output() onToggled =  new EventEmitter();
 
-    @ContentChild(SBItemBody) body: SBItemBody;
+    @ContentChild(SBItemBody, {static: false}) body: SBItemBody;
 
     constructor(@Inject(forwardRef(() => SqueezeBox)) squeezebox: SqueezeBox) {
         this.squeezebox = squeezebox;
