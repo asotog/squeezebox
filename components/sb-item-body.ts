@@ -11,7 +11,7 @@ import {Component, ElementRef, Renderer, ViewChild} from '@angular/core';
 })
 export class SBItemBody {
 
-    @ViewChild('body') bodyEl: ElementRef;
+    @ViewChild('body', {static: false}) bodyEl: ElementRef;
 
     constructor(private renderer: Renderer) {}
     
